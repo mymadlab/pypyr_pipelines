@@ -1,0 +1,20 @@
+# To execute this pipeline, shell something like:
+# pypyr gentag v#.#.#
+context_parser: pypyr.parser.string
+steps:
+  - pypyr.steps.configvars
+  - name: pypyr.steps.shell
+    comment: Switch to default branch
+    in:
+      cmd:
+        run: git sw {defaultbranch}
+  - name: pypyr.steps.cmd
+    comment: Create Tag
+    in:
+      cmd:
+        run: git tag {argString}
+  - name: pypyr.steps.cmd
+    comment: Push tag to repo
+    in:
+      cmd:
+        run: git push origin {argString}

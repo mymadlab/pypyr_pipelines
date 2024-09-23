@@ -2,3 +2,5 @@ pipelines_subdir: .pypyr
 vars:
   gitfqdn: github.com
   gitorg: mymadlab
+  defaultbranch: main
+  

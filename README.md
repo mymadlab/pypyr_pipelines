@@ -2,6 +2,14 @@
 
 ## Usage
 
+### gentag
+
+Pulls latest for the repo, creates tag, and pushes
+
+```bash
+pypyr gentag v#.#.#
+```
+
 ### localmodule
 
 Creates a local copy of a terraform module from github
